@@ -1,0 +1,4 @@
+runtime of 512x512 matmul: 0.010427 seconds
+runtime of 1024x1024 matmul: 0.068431 seconds
+runtime of 2048x2048 matmul: 0.588970 seconds
+runtime of 4096x4096 matmul: 4.241586 seconds
