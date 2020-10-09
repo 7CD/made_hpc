@@ -16,12 +16,12 @@ int main (int argc, char *argv[])
     }
 
 #pragma omp parallel \
-    shared(a,b,c,chunk) \
+    shared(a,b,c) \
     private(i,tid) \
-    schedule(static,chunk)
+    firstprivate(chunk)
     {
         tid = omp_get_thread_num();
-
+    #pragma omp for schedule(static,chunk)
         for (i = 0; i < N; ++i)
         {
             c[i] = a[i] + b[i];
